@@ -1,3 +1,3 @@
-import dataCollection from './dataCollection.js';
+import eventListener from './eventListener.js';
 
-dataCollection.getData('london');
+eventListener.enableSearch();
