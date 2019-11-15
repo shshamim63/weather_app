@@ -30,26 +30,32 @@ const displayTemparature = (() => {
     labelContainer.appendChild(checkboxContainer);
     labelContainer.appendChild(leverContainer);
     labelContainer.appendChild(farenhiteTag);
-    return switchContent.appendChild(labelContainer);
+    switchContent.appendChild(labelContainer);
+    return switchContent;
   };
-  const renderadditionalInfoToday = (maxtemp, mintemp, humidity, speed) => {
+  const imagePortion = (iconType) => {
+    const weatherImage = document.createElement('img');
+    weatherImage.setAttribute('src', `https://www.metaweather.com/static/img/weather/png/${iconType}.png`);
+    return weatherImage;
+  };
+  const renderAdditionalInfoToday = (maxtemp, mintemp, humidity, speed) => {
     const additionalInfoTodayContainer = document.createElement('div');
     additionalInfoTodayContainer.classList.add('col', 's6');
     const listContainer = document.createElement('ul');
     listContainer.classList.add('collection');
     const maxContainer = document.createElement('li');
     maxContainer.classList.add('collection-item');
-    maxContainer.innerText = `Max Temp: ${maxtemp} °C`;
+    maxContainer.innerText = `Max Temp: ${Math.ceil(maxtemp)} °C`;
 
     const minContainer = document.createElement('li');
     minContainer.classList.add('collection-item');
-    minContainer.innerText = `Min Temp: ${mintemp} °C`;
+    minContainer.innerText = `Min Temp: ${Math.ceil(mintemp)} °C`;
     const humidityContainer = document.createElement('li');
     humidityContainer.classList.add('collection-item');
-    humidityContainer.innerText = `Relative Humidity: ${humidity}%`;
+    humidityContainer.innerText = `Relative Humidity: ${humidity.toFixed(2)}%`;
     const windContainer = document.createElement('li');
     windContainer.classList.add('collection-item');
-    windContainer.innerText = `Wind speed: ${speed}m/s`;
+    windContainer.innerText = `Wind speed: ${speed.toFixed(2)}m/s`;
 
     listContainer.appendChild(maxContainer);
     listContainer.appendChild(minContainer);
@@ -57,7 +63,8 @@ const displayTemparature = (() => {
     listContainer.appendChild(windContainer);
     return additionalInfoTodayContainer.appendChild(listContainer);
   };
-  const renderTodaysContainer = () => {
+  const renderTodaysContainer = (renderdata) => {
+    console.log(renderdata);
     const todayContainer = document.createElement('div');
     todayContainer.classList.add('weather');
     const todaydivRow = document.createElement('div');
@@ -74,6 +81,27 @@ const displayTemparature = (() => {
 
     const infoContainer = document.createElement('div');
     infoContainer.classList.add('info', 'col', 's6');
+    const cityportion = insertCityName(renderdata[0]);
+    const imagePortionrender = imagePortion(renderdata[1][0].weather_state_abbr);
+    const dateportion = insertdate(renderdata[1][0].applicable_date);
+    const switchportion = switchContainer();
+    const additionalView = renderAdditionalInfoToday(
+      renderdata[1][0].max_temp,
+      renderdata[1][0].min_temp,
+      renderdata[1][0].humidity,
+      renderdata[1][0].wind_speed,
+    );
+    infoContainer.appendChild(cityportion);
+    infoContainer.appendChild(dateportion);
+    infoContainer.appendChild(switchportion);
+    infoContainer.appendChild(imagePortionrender);
+    cardContent.appendChild(infoContainer);
+    cardContent.appendChild(additionalView);
+    cardContainer.appendChild(cardContent);
+    todaydivColumn.appendChild(cardContainer);
+    todaydivRow.appendChild(todaydivColumn);
+    todayContainer.appendChild(todaydivRow);
+    document.querySelector('.weather-body').appendChild(todayContainer);
   };
   return {
     renderTodaysContainer,

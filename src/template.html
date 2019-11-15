@@ -21,7 +21,7 @@
     <div class="container">
       <nav class="mt-1rem">
         <div class="nav-wrapper">
-          <form>
+          <form id="city-input">
             <div class="input-field">
               <input id="search" type="search" placeholder="Enter City Name" required>
               <label class="label-icon" for="search"><i class="material-icons">search</i></label>
@@ -31,22 +31,24 @@
         </div>
       </nav>
     </div>
-    <div class="weather">
-      <div class="today row">
-        <div class="col s8 offset-s2">
-          <div class="card">
-            <div class="card-content row">
-              <div class="info col s6">
-                <span class="card-title">City Name</span>
-                <p>October 23,2019</p>
-                <div class="switch">
-                  <label>
-                    <span class="blue-text darken-4">C</span>
-                    <input type="checkbox">
-                    <span class="lever"></span>
-                    <span class="blue-text darken-4">F</span>
-                  </label>
-                    </div>
+    <div class="weather-body"></div>
+      <!-- <div class="weather">
+        <div class="today row">
+          <div class="col s8 offset-s2">
+            <div class="card">
+              <div class="card-content row">
+                <div class="info col s6">
+                  <span class="card-title">City Name</span>
+                  <p>October 23,2019</p>
+                  <div class="switch">
+                    <label>
+                      <span class="blue-text darken-4">C</span>
+                      <input type="checkbox">
+                      <span class="lever"></span>
+                      <span class="blue-text darken-4">F</span>
+                    </label>
+                  </div>
+                  <img src="https://www.metaweather.com/static/img/weather/png/sn.png" alt="">
                 </div>
                 <div class="col s6">
                   <ul class="collection">
@@ -56,13 +58,13 @@
                     <li class="collection-item">Wind speed: 24m/s</li>
                   </ul>                  
                 </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row next-append">
+      </div> -->
+      <div class="row next-append">
         <div class="col s12">
           <div class="card col s12 m6 l3">
             <ul class="card-content collection with-header">
@@ -74,16 +76,17 @@
             </ul>  
           </div>
           <div class="card col s12 m6 l3">
-              <ul class="card-content collection with-header">
-                <li class="collection-header"><h5>Date</h5></li>
-                <li class="collection-item">Alvin</li>
-                <li class="collection-item">Alvin</li>
-                <li class="collection-item">Alvin</li>
-                <li class="collection-item">Alvin</li>
-              </ul>  
-            </div>
+            <ul class="card-content collection with-header">
+              <li class="collection-header"><h5>Date</h5></li>
+              <li class="collection-item">Alvin</li>
+              <li class="collection-item">Alvin</li>
+              <li class="collection-item">Alvin</li>
+              <li class="collection-item">Alvin</li>
+            </ul>  
+          </div>
         </div>
       </div>
+    </div>
   </main> 
   <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"

@@ -1,4 +1,5 @@
 import dataCollection from './dataCollection.js';
+import displayTemparature from './domHelper.js';
 
 const eventListener = (() => {
   const enableSearch = () => {
@@ -6,8 +7,12 @@ const eventListener = (() => {
     searchbox.addEventListener('keypress', (e) => {
       const key = e.which || e.keyCode;
       if (key === 13) {
+        e.preventDefault();
         const city = searchbox.value;
-        dataCollection.getData(city);
+        document.querySelector('#city-input').reset();
+        dataCollection.getData(city).then((data) => {
+          displayTemparature.renderTodaysContainer([data.title, data.consolidated_weather.slice(0, 5)]);
+        });
       }
     });
   };
