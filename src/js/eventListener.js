@@ -1,5 +1,5 @@
-import dataCollection from './dataCollection.js';
-import displayTemparature from './domHelper.js';
+import dataCollection from './dataCollection';
+import displayTemparature from './domHelper';
 
 const eventListener = (() => {
   const enableSearch = () => {
