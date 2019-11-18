@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: './src/index.js',
+    main: './src/js/index.js',
   },
   output: {
     filename: 'main.[contentHash].js',
