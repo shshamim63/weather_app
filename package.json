@@ -1,10 +1,13 @@
 {
   "name": "weather_app",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "This is a web-based app that uses API to render realtime weather data of a specific city",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "eslint --fix",
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +20,30 @@
   },
   "homepage": "https://github.com/shshamim63/weather_app#readme",
   "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.4.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "regenerator-runtime": "^0.13.3",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack-merge": "^4.2.2"
   }
 }
