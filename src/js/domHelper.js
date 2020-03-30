@@ -66,7 +66,7 @@ const displayTemparature = (() => {
   };
   const renderAdditionalInfoToday = (maxtemp, mintemp, humidity, speed) => {
     const additionalInfoTodayContainer = document.createElement('div');
-    additionalInfoTodayContainer.classList.add('col', 's6',);
+    additionalInfoTodayContainer.classList.add('col', 's6');
     const listContainer = document.createElement('ul');
     listContainer.classList.add('collection');
     const maxContainer = document.createElement('li');
