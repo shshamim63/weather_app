@@ -7,8 +7,9 @@ const dataCollertion = (() => {
     const weatherData = await loacationInfo.then((d) => fetch(proxyUrl + weatherFetchUrl + d[0].woeid)).then((d) => d.json()).catch(() => {
       if (initialLoad) {
         alert('Could not load current city!');
+      } else {
+        alert('City not found!');
       }
-      alert('City not found!');
     });
     return weatherData;
   };
