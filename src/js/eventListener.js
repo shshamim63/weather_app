@@ -10,7 +10,7 @@ const eventListener = (() => {
         e.preventDefault();
         const city = searchbox.value;
         document.querySelector('#city-input').reset();
-        dataCollection.getData(city).then((data) => {
+        dataCollection.getData(city, false).then((data) => {
           document.querySelector('.weather-body').innerHTML = '';
           displayTemparature.renderTodaysContainer([data.title, data.consolidated_weather.slice(0, 5)]);
         });
