@@ -14,15 +14,15 @@
 
 <h3 align=center>Large Screen</h3>
 
-![fullscreen](../src/images/watherappfull.png)
+![fullscreen](/src/images/watherappfull.png)
 
 <h3 align=center>Medium Screen</h3>
 
-![mediumscreen](../src/images/weatherappMedium.png)
+![mediumscreen](/src/images/weatherappMedium.png)
 
 <h3 align=center>Small Screen</h3>
 
-![smallscreen](../src/images/weatherappSmall.png)
+![smallscreen](/src/images/weatherappSmall.png)
 
 
 ## Background
