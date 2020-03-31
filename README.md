@@ -1,8 +1,11 @@
 <h1 align=center> **Weather App** </h1>
+
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 [![dependencies Status](https://david-dm.org/dwyl/esta/status.svg)](https://david-dm.org/dwyl/esta)
 
 > Is a Web-based app that performs a set of actions to get realtime weather data from https://www.metaweather.com/ as json format. A user can enter specific city name to know about that city's minimum and maximum temparature along with wind speed, relative humidity.
+
+## [Live Demo](https://betaweather.netlify.com/)
 
 ## Table of Contents
 - [Background](#background)
