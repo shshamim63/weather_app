@@ -19,11 +19,11 @@
 
 ![fullscreen](/src/images/watherappfull.png)
 
-<h3 align=center>Medium Screen</h3>
+<h3>Medium Screen</h3>
 
 <div style="text-align:center"><img src="./src/images/weatherappMedium.png" /></div>
 
-<h3 align=center>Small Screen</h3>
+<h3>Small Screen</h3>
 
 <div style="text-align:center"><img src="./src/images/weatherappSmall.png" /></div>
 
