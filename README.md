@@ -18,11 +18,11 @@
 
 <h3 align=center>Medium Screen</h3>
 
-![mediumscreen](/src/images/weatherappMedium.png)
+<div style="text-align:center"><img src="./src/images/weatherappMedium.png" /></div>
 
 <h3 align=center>Small Screen</h3>
 
-![smallscreen](/src/images/weatherappSmall.png)
+<div style="text-align:center"><img src="./src/images/weatherappSmall.png" /></div>
 
 
 ## Background
